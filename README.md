@@ -3,9 +3,8 @@ Le projet de refonte du site de l'association FFCM (Fédération Française des 
 
 Membres : BUT2 Groupe : 205 
 
-Okito Emmanuel 
-Spencer da Graça Rafael 
-Atchekzaï Ismael 
+Okito Emmanuel ,
+Spencer da Graça Rafael,
 Di Fatta clément
 
 
