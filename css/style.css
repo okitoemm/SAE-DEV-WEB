@@ -248,7 +248,7 @@ textarea {
 .navbar{
   background: linear-gradient(to left,#3383ff,#33bbff,#33daff);
   position: sticky;
-  top: 0px;
+
   z-index: 1;
 }
 
