@@ -1,254 +1,352 @@
-/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
-
-/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
+/* Base CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000000;
+    color: #333;
+    line-height: 1.6;
 }
 
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
+/* Header */
+header {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 1rem 0;
 }
 
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
+header .logo img {
+    height: 80px;
+    padding: 0.5rem 1.9rem;
+    
 }
 
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
+header nav ul {
+    display: flex;
+    list-style: none;
 }
 
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-  resize: vertical;
+header nav ul li {
+    margin-left: 2rem;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden,
-[hidden] {
-  display: none !important;
+header nav ul li a  {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-
-.visually-hidden {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  /* 1 */
+/*button*/
+.buttonmenu:hover{
+ background-color: #e68a00;
+ border-radius: 10px;
+ font-weight: 700;
 }
 
-/*
- * Extends the .visually-hidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.visually-hidden.focusable:active,
-.visually-hidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
+/*barre de recherche*/
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Aligns the search bar to the right */
 }
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-  visibility: hidden;
+.search-input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
 }
 
-/*
- * Clearfix: contain floats
- *
- * The use of `table` rather than `block` is only necessary if using
- * `::before` to contain the top-margins of child elements.
- */
-
-.clearfix::before,
-.clearfix::after {
-  content: "";
-  display: table;
+.search-button {
+    padding: 0.5rem 2rem;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-.clearfix::after {
-  clear: both;
+.search-button:hover {
+    background-color: #e68a00;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
+/* For mobile: Make the search bar take the full width */
+@media (max-width: 768px) {
+    .search-form {
+        width: 50%;
+        margin-top: 1rem;
+    }
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+    .search-input {
+        width: 80%;
+    }
+
+    .search-button {
+        width: 55%;
+    }
 }
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+
+
+
+
+
+
+
+/* Bannière Accueil */
+.banner {
+    background-image: url('imgs/photoaccueil.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
 }
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-}
-/*-----------------------Couleur en dégradé de la nav bar et sa position--------------------------------*/
-.navbar{
-  background: linear-gradient(to left,#3383ff,#33bbff,#33daff);
-  position: sticky;
-  top: 0px;
-  z-index: 1;
+.banner h1 {
+    font-size: 3rem;
 }
 
+.banner p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.banner .btn-primary {
+    background-color: #ff9900;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.btn-primary:hover{
+    background-color: #000000;
+}
+
+/* Section Services */
+.services {
+    padding: 3rem 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 10px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.service-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.service-card h3 {
+    margin: 1rem 0 0.5rem;
+}
+
+
+/* Section À propos */
+.apropos {
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.apropos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.apropos p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Section Actualités */
+.actualites {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.actualites h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.actualites .news-item {
+    margin-bottom: 30px;
+}
+
+.actualites .news-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.actualites .news-item p {
+    font-size: 1.2rem;
+}
+
+/* Section Événements */
+.evenements {
+    padding: 60px 20px;
+    background-color: #eaeaea;
+    text-align: center;
+}
+
+.evenements h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.evenements .event-item {
+    margin-bottom: 30px;
+}
+
+.evenements .event-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.evenements .event-item p {
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+/* Section Contact */
+.contact {
+    padding: 3rem 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    padding: 0.8rem 1.5rem;
+    background-color: #004080;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* Hamburger menu styles */
+.menu-toggle {
+    display: none; /* Default is hidden on larger screens */
+    cursor: pointer;
+    position: relative;
+    background-color: #333; /* Make the hamburger icon visible */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: white;
+}
+
+/* Responsive menu for mobile */
+@media (max-width: 768px) {
+    /* Show the hamburger menu */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hide the navigation links by default */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #000000;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 60%;
+    }
+
+    /* When the menu is active, show the links */
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+        border-bottom: 1px solid #444;
+    }
+
+    .nav-links li a {
+        padding: 10px 0;
+        width: 100%;
+        display: block;
+        color: white; /* Ensure the links are visible */
+        text-decoration: none;
+    }
+}
