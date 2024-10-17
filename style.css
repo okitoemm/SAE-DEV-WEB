@@ -28,14 +28,12 @@ header .container {
 header .logo img {
     height: 80px;
     padding: 0.5rem 1.9rem;
-    
 }
 
 header nav ul {
     display: flex;
     list-style: none;
 }
-
 header nav ul li {
     margin-left: 2rem;
 }
@@ -97,13 +95,6 @@ header nav ul li a  {
         width: 55%;
     }
 }
-
-
-
-
-
-
-
 
 /* Bannière Accueil */
 .banner {
@@ -193,30 +184,82 @@ header nav ul li a  {
     margin: 0 auto;
 }
 
-/* Section Actualités */
+/* SECTION Actualités */
+
 .actualites {
-    padding: 60px 20px;
-    background-color: #fff;
+    padding: 40px;
+    background-color: #f9f9f9;
     text-align: center;
 }
 
 .actualites h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-}
-
-.actualites .news-item {
+    font-size: 2rem;
+    color: #007BFF;
     margin-bottom: 30px;
 }
 
-.actualites .news-item h3 {
-    font-size: 1.8rem;
+/* Grille des actualités */
+.actualites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Carte individuelle d'actualité */
+.actualite-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.actualite-card:hover {
+    transform: scale(1.05);
+}
+
+/* Image dans chaque carte */
+.actualite-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Contenu des cartes */
+.actualite-content {
+    padding: 15px;
+}
+
+.actualite-content h3 {
+    font-size: 1.25rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.actualite-content p {
+    font-size: 0.95rem;
+    color: #777;
+}
+
+/* Style des dates et autres informations */
+.actualite-content span {
+    display: block;
+    font-size: 0.85rem;
+    color: #aaa;
     margin-bottom: 10px;
 }
 
-.actualites .news-item p {
-    font-size: 1.2rem;
+@media (max-width: 768px) {
+    .actualites-grid {
+        grid-template-columns: 1fr;
+    }
 }
+
+/* FIN ACTUALITE*/
+
+
+
 
 /* Section Événements */
 .evenements {
@@ -244,47 +287,209 @@ header nav ul li a  {
 }
 
 
+/* SECTION EVENEMENTS 2*/ 
 
 
-
-
-/* Section Contact */
-.contact {
-    padding: 3rem 0;
-    background-color: #f4f4f4;
+/* Section événements en plein écran pour les ordinateurs */
+.events-section {
+    background-color: #f0f8ff;
+    padding: 40px;
     text-align: center;
 }
 
+.events-section h2 {
+    font-size: 2rem;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+/* Cartes d'événements organisées en flex pour grand écran */
+.event-cards, .more-events {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Carte individuelle d'événement */
+.event-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 30%; /* Largeur de chaque carte d'événement */
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+    transform: scale(1.05);
+}
+
+/* Image de la carte d'événement */
+.event-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.event-card h3 {
+    font-size: 1.5rem;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+.event-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Style du bouton "Voir Plus" */
+.see-more-btn {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.see-more-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Section des événements supplémentaires cachée par défaut */
+.more-events {
+    margin-top: 20px;
+}
+
+.event-item.highlight {
+    background-color: #FFEB3B;
+    border: 2px solid #FFC107;
+}
+
+.event-item:hover {
+    background-color: #FFEB3B;
+}
+
+/* Styles pour mobiles et petits écrans */
+@media (max-width: 768px) {
+    /* Les cartes d'événements sont centrées et s'empilent en colonne */
+    .event-cards, .more-events {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Chaque carte d'événement occupe 90% de la largeur de l'écran */
+    .event-card {
+        width: 90%;
+        margin-bottom: 20px; /* Ajout d'espace entre les cartes */
+    }
+
+    /* Bouton "Voir Plus" centré pour mobile */
+    .see-more-btn {
+        width: 100%; /* Pleine largeur pour les petits écrans */
+    }
+}
+
+
+.see-more-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Section des événements supplémentaires cachée par défaut */
+.more-events {
+    margin-top: 20px;
+}
+
+.event-item.highlight {
+    background-color: #FFEB3B;
+    border: 2px solid #FFC107;
+}
+
+
+.event-item:hover{
+    background-color: #FFEB3B;
+}
+ 
+
+/* FIN  SECTION EVENEMENTS */ 
+
+
+
+/* Section contact */
+.contact {
+    padding: 3rem 0;
+    background-color: #f4f4f4;
+    text-align: center; /* Centre les éléments textuels */
+}
+
+/* Formulaire plein écran pour les ordinateurs */
 .contact form {
-    max-width: 500px;
+    max-width: 80%; /* Formulaire plein écran */
+    width: 100%; /* Prend la largeur de la page */
     margin: 0 auto;
     text-align: left;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optionnel : ombre pour relief */
 }
 
-.contact label {
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
+/* Champs de formulaire */
 .contact input, .contact textarea {
-    width: 100%;
+    width: 100%; /* Utilise toute la largeur disponible */
     padding: 0.8rem;
     margin-bottom: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
+/* Bouton de soumission */
 .contact button {
     padding: 0.8rem 1.5rem;
     background-color: #004080;
     color: #fff;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%; /* Bouton pleine largeur */
+    font-size: 1rem;
+    margin-top: 1rem;
 }
 
-/* Footer */
+/* Changement de style pour écrans plus petits (ex. mobiles) */
+@media (max-width: 768px) {
+    .contact form {
+        max-width: 500px; /* Formulaire plus étroit pour mobile */
+        width: 100%;
+        margin: 0 auto; /* Centre le formulaire sur mobile */
+        text-align: left;
+    }
+
+    .contact input, .contact textarea {
+        width: 100%; /* Prend toute la largeur dans les petites tailles */
+    }
+
+    .contact button {
+        width: 100%; /* Bouton pleine largeur sur mobile */
+    }
+}
+
+
+.contact button:hover {
+    background-color: #003366; /* Change la couleur au survol */
+}
+
+
+
+/* ANCIEN FOOTER */
 footer {
-    background-color: #004080;
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 1rem 0;
@@ -292,7 +497,10 @@ footer {
 
 footer p {
     margin: 0;
-}
+} 
+
+
+
 
 
 /* Hamburger menu styles */
@@ -313,11 +521,19 @@ footer p {
     background-color: white;
 }
 
-/* Responsive menu for mobile */
+/* Responsive menu pour le  mobile */
 @media (max-width: 768px) {
     /* Show the hamburger menu */
     .menu-toggle {
-        display: block;
+        display: block; /*Menu le mettre relative*/
+        .contact {
+    padding: 3rem 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+
+
     }
 
     /* Hide the navigation links by default */
@@ -349,4 +565,226 @@ footer p {
         color: white; /* Ensure the links are visible */
         text-decoration: none;
     }
+
+
+
+
+
+/* APROPOS DE NOUS*/
+
+.apropos {
+    padding: 50px;
+    background-color: white;
+    text-align: center;
+}
+
+.apropos.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.apropos.h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+.apropos.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.apropos.h2 {
+    font-size: 1.8rem;
+    margin: 20px 0;
+}
+
+.apropos.p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+.apropos.ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.apropos.ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.apropos.btn-primary, .btn-secondary {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.apropos.btn-primary {
+    background-color: #007BFF;
+}
+
+.apropos.btn-primary:hover {
+    background-color: #edf90b;
+}
+
+    /* FIN  APROPOS DE NOUS*/
+
+
+
+
+/*LE FOOTER*/
+
+/* ANCIEN FOOTER */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer .container {
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Logos des partenaires */
+.footer-logos {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-logos img {
+    height: 50px;
+    filter: grayscale(50%); /* Logos en noir et blanc */
+    transition: filter 0.1s ease;
+}
+
+.footer-logos img:hover {
+    filter: grayscale(0%); /* Recoloriser au survol */
+}
+
+/* Liens rapides */
+.footer-links {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Réseaux sociaux */
+.footer-social {
+    flex-basis: 30%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    font-size: 0.5rem;
+}
+
+.footer-social img {
+    height: 30px;
+}
+
+/* Informations de contact */
+.footer-contact {
+    flex-basis: 100%;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+/* Section Newsletter */
+.footer-newsletter {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+}
+
+.footer-newsletter h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footer-newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-newsletter input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 250px;
+}
+
+.footer-newsletter button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-newsletter button:hover {
+    background-color: #0056b3;
+}
+
+/* Mentions légales */
+.footer-legal {
+    flex-basis: 70%;
+    font-size: 0.5rem;
+}
+
+.footer-legal a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-legal a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logos,
+    .footer-links,
+    .footer-social,
+    .footer-contact,
+    .footer-newsletter,
+    .footer-legal {
+        flex-basis: 50%;
+    }
+}
+
+/* FIN  FOOTER*/
+
+
 }
