@@ -1,0 +1,112 @@
+body{
+    background-color: white;
+}
+
+.events-section-doc {
+    background-color: #f0f8ff;
+    padding: 40px;
+    text-align: center;
+}
+
+.events-section-doc h2 {
+    font-size: 2rem;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+/* Cartes d'événements organisées en flex pour grand écran */
+.event-cards-doc, .more-events {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Carte individuelle d'événement */
+.event-card-doc {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 30%; /* Largeur de chaque carte d'événement */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.event-card-doc:hover {
+    transform: scale(1.05);
+}
+
+/* Image de la carte d'événement */
+.event-card-doc img {
+    width: 50%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.event-card-doc h3 {
+    font-size: 1.5rem;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+.event-card-doc p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/*Animation des events card*/
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+#card1{
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+#card2{
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+
+#card3{
+    opacity: 0;
+    animation: fadeIn 4s forwards;
+}
+
+#card4{
+    opacity: 0;
+    animation: fadeIn 5s forwards;
+}
+
+/*Liste des documents*/
+
+.container-doc-content a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*Accordéon*/
+
+.accordion-content {
+    padding: 0 18px;
+    background-color: red;
+    display: none;
+    overflow: hidden;
+}
+
+.accordion {
+    text-align: center;
+    cursor: pointer;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.accordion h3{
+
+}
