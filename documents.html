@@ -5,14 +5,15 @@
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="documents.css">
-    <script src="documents.js"></script>
+    <script type="module" src="index.js"></script>
+    <script type="module" src="documents.js"></script>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo">
                 <a href="index.html"   >
-                    <img src="imgs/logoffcm.png" alt="Logo FFCM" >
+                    <img src="img/logoffcm.png" alt="Logo FFCM" >
                 </a>
             </div>
             <!-- FIN LOGO -->
@@ -20,27 +21,31 @@
 
 
             <!-- Hamburger icon for mobile -->
-            <div class="menu-toggle" id="mobile-menu">
+            <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
 
+
+
             <!-- BARRE MENU  -->
             <nav>
-                <ul class="nav-links" id="nav-links">
-                    <li class="buttonmenu"> <a href="index.html">Accueil</a> </li>
+                <ul class="nav-menu" id="nav-links">
                     <li class="buttonmenu">
-                    <li class="dropdown-button buttonmenu">
-                        <a href="#services">Documents</a>
-                        <div class="dropdown-content">
-                            <a href="https://www.ffcm.info/liens-utiles">Liens Utiles</a>
-                            <a href="https://www.ffcm.info/statistiques">Statistiques</a>
-                            <a href="https://www.ffcm.info/copie-de-medias">Médias</a>
-                            <a href="https://www.ffcm.info/archives-c10uc">Archives</a>
-                            <a href="https://www.ffcm.info/livres-conseills">Livres conseillés</a>
-                        </div>
+                        <a href="index.html">Accueil</a>
                     </li>
+                    <li class="buttonmenu">
+                        <li class="dropdown-button buttonmenu">
+                            <a href="#">Documents</a>
+                            <div class="dropdown-content">
+                                <a href="https://www.ffcm.info/liens-utiles">Liens Utiles</a>
+                                <a href="https://www.ffcm.info/statistiques">Statistiques</a>
+                                <a href="https://www.ffcm.info/copie-de-medias">Médias</a>
+                                <a href="https://www.ffcm.info/archives-c10uc">Archives</a>
+                                <a href="https://www.ffcm.info/livres-conseills">Livres conseillés</a>
+                            </div>
+                        </li>
                     </li>
                     <li class="buttonmenu"> <a href="#contact">Actualités</a></li>
                     <li class="buttonmenu"> <a href="https://www.ffcm.info/annonceurs">Nos Annonceurs</a></li>
@@ -68,35 +73,38 @@
 
         <div class="event-cards-doc">
             <div id="card1" class="event-card-doc">
-                <img src="imgs/cure-pratique.jpg" alt="La cure en pratique">
+                <img src="img/cure-pratique.jpg" alt="La cure en pratique">
                 <h3>La cure en pratique </h3>
 
             </div>
 
             <div id="card2" class="event-card-doc">
-                <img src="imgs/nos-actions.jpg" alt="Nos actions">
+                <img src="img/nos-actions.jpg" alt="Nos actions">
                 <h3>Nos actions</h3>
 
             </div>
 
             <div id="card3" class="event-card-doc">
-                <img src="imgs/dviers.png" alt="Divers">
+                <img src="img/divers.png" alt="Divers">
                 <h3>Divers</h3>
 
             </div>
 
             <div id="card4" class="event-card-doc">
-                <img src="imgs/logoffcm.png" alt="Vie de la FFCM">
+                <img src="img/logoffcm.png" alt="Vie de la FFCM">
                 <h3>Vie de la FFCM</h3>
 
             </div>
         </div>
-
-
     </section>
+
+    <!--Début des accordéons-->
     <div class="container-doc">
         <div id="container-doc-content-1" class="container-doc-content">
-            <h3 id="accordion-1" class="accordion">La cure en pratique</h3>
+            <div class="accordion-header">
+                <h3 id="accordion-1" class="accordion">La cure en pratique</h3>
+                <button class="toggle-btn" id="button-1">+</button>
+            </div>
             <div  class="accordion-content">
                 <ul>
                     <li><a href="https://www.medecinethermale.fr/curistes/les-stations/annuaire-des-stations-thermales.html">Destinations Thermales</a></li>
@@ -125,7 +133,10 @@
 
         </div>
         <div id="container-doc-content-2" class="container-doc-content">
-            <h3 id="accordion-2" class="accordion">Nos actions</h3>
+            <div class="accordion-header">
+                <h3 id="accordion-2" class="accordion">Nos actions</h3>
+                <button class="toggle-btn" id="button-2">+</button>
+            </div>
             <div  class="accordion-content">
                 <ul>
                     <li><a href="https://www.ffcm.info/_files/ugd/cdd428_012ed77a88414b48877fd1f66941daa4.pdf">Nos principales actions</a></li>
@@ -143,7 +154,10 @@
             </div>
         </div>
         <div id="container-doc-content-3" class="container-doc-content">
-            <h3 id="accordion-3" class="accordion">Divers</h3>
+            <div class="accordion-header">
+                <h3 id="accordion-3" class="accordion">Divers</h3>
+                <button class="toggle-btn" id="button-3">+</button>
+            </div>
             <div  class="accordion-content">
                 <ul>
                     <li><a href="http://campus.cerimes.fr/maieutique/UE-sante-societe-humanite/droit_patient/site/html/cours.pdf">Loi (droits des malades)</a></li>
@@ -156,7 +170,10 @@
             </div>
         </div>
         <div id="container-doc-content-4" class="container-doc-content">
-            <h3 id="accordion-4" class="accordion">La vie de la FFCM</h3>
+            <div class="accordion-header">
+                <h3 id="accordion-4" class="accordion">La vie de la FFCM</h3>
+                <button class="toggle-btn" id="button-4">+</button>
+            </div>
             <div  class="accordion-content">
                 <ul>
                     <li><a href="https://www.ffcm.info/_files/ugd/cdd428_c1a67369d12941358587535fb64b88e8.pdf">Règlement Intérieur</a></li>
@@ -172,7 +189,7 @@
             </div>
         </div>
     </div>
-
+    <!--Fin des accordéons-->
 
     <!--FIN  SECTION DOCUMENTS-->
     <!-- Footer -->
@@ -181,10 +198,10 @@
             <!-- Section Logos -->
             <div class="footer-logos">
 
-                <img src="#" alt="Logo Partenaire 2">
-                <img src="#" alt="Logo Partenaire 3">
-                <img src="#" alt="Logo Partenaire 4">
-                <img src="#" alt="Logo Partenaire 5">
+                <img src="img/LOGOP2.jpeg" alt="Logo Partenaire 2">
+                <img src="img/LOGOP3.jpeg" alt="Logo Partenaire 3">
+                <img src="img/LOGOP4.jpeg" alt="Logo Partenaire 4">
+                <img src="img/LOGOP5.jpeg" alt="Logo Partenaire 5">
 
                 <!-- Ajouter d'autres logos ici -->
             </div>
@@ -200,9 +217,9 @@
 
             <!-- Réseaux sociaux -->
             <div class="footer-social">
-                <a href="https://facebook.com" target="_blank"><img src="#" alt="Facebook" ></a>
-                <a href="https://twitter.com" target="_blank"><img src="#" alt="Twitter"></a>
-                <a href="https://instagram.com" target="_blank"><img src="#" alt="Instagram"></a>
+                <a href="https://facebook.com" target="_blank"><img src="img/ICONSSOCIAL/logo-facebook.png" alt="Facebook" ></a>
+                <a href="https://twitter.com" target="_blank"><img src="img/ICONSSOCIAL/logo-X.jpg" alt="Twitter"></a>
+                <a href="https://instagram.com" target="_blank"><img src="img/ICONSSOCIAL/logo-instagram.png" alt="Instagram"></a>
             </div>
 
             <!-- Informations de contact -->

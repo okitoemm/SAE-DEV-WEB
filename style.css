@@ -131,7 +131,7 @@ header nav ul li a  {
 
 /* Bannière Accueil */
 .banner {
-    background-image: url('imgs/photoaccueil.jpg');
+    background-image: url('img/photoaccueil.jpg');
     background-size: cover;
     background-position: center;
     height: 80vh;
@@ -537,7 +537,7 @@ footer p {
 
 
 /* Hamburger menu styles */
-.menu-toggle {
+.hamburger {
     display: none; /* Default is hidden on larger screens */
     cursor: pointer;
     position: relative;
@@ -546,31 +546,63 @@ footer p {
     border-radius: 5px;
 }
 
-.menu-toggle .bar {
+.hamburger .bar {
     display: block;
     width: 25px;
     height: 3px;
     margin: 5px 0;
     background-color: white;
+    --webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 /* Responsive menu pour le  mobile */
 @media (max-width: 768px) {
     /* Show the hamburger menu */
-    .menu-toggle {
+    .hamburger {
         display: block; /*Menu le mettre relative*/
         .contact {
-    padding: 3rem 0;
-    background-color: #f4f4f4;
-    text-align: center;
-}
-
-
-
+            padding: 3rem 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
     }
 
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: top 0.3s ease;
+    }
+
+    .buttonmenu{
+        margin: 16px 0;
+    }
+
+    .nav-menu.active{
+        left:0;
+        background-color: white;
+        text-decoration-color: black;
+    }
+
+
+
     /* Hide the navigation links by default */
-    .nav-links {
+    .nav-menu {
         display: none;
         flex-direction: column;
         background-color: #000000;
@@ -581,25 +613,25 @@ footer p {
     }
 
     /* When the menu is active, show the links */
-    .nav-links.active {
+    .nav-menu.active {
         display: flex;
     }
 
-    .nav-links li {
+    .nav-menu li {
         margin: 10px 0;
         text-align: center;
         border-bottom: 1px solid #444;
     }
 
-    .nav-links li a {
+    .nav-menu li a {
         padding: 10px 0;
         width: 100%;
         display: block;
-        color: white; /* Ensure the links are visible */
+        color: black; /* Ensure the links are visible */
         text-decoration: none;
     }
 
-
+}
 
 
 
@@ -820,4 +852,3 @@ footer p {
 /* FIN  FOOTER*/
 
 
-}

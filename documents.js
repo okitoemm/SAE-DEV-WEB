@@ -21,28 +21,28 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-document.addEventListener("DOMContentLoaded",function (){
-    function accordionShower(accordionId){
-        const accordion = document.getElementById(accordionId);
-        if(accordion){
-            accordion.addEventListener('click',function (){
-                const accordionContent = accordion.nextElementSibling;
-                if(accordionContent){
-                    if(accordionContent.style.display ==='block'){
-                        accordionContent.style.display = 'none';
-                    }else{
-                        accordionContent.style.display = 'block';
-                    }
-                }
-            });
-        }else{
-            console.error(`Element with ID "${accordionId}" not found`);
-        }
-    }
-    accordionShower('accordion-1');
-    accordionShower('accordion-2');
-    accordionShower('accordion-3');
-    accordionShower('accordion-4');
+document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll('.toggle-btn');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const parent = button.parentElement.parentElement;
+            const content = parent.querySelector('.accordion-content');
+
+            if (parent.classList.contains('active')) {
+
+
+
+                content.style.maxHeight = null;
+                parent.classList.remove('active');
+                button.querySelector('button').textContent = "-";
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                parent.classList.add('active');
+                button.querySelector('button').textContent = "+";
+            }
+        });
+    });
 });
 
 

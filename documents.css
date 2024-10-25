@@ -93,20 +93,83 @@ body{
 
 /*Accordéon*/
 
-.accordion-content {
-    padding: 0 18px;
-    background-color: red;
-    display: none;
+.container-doc-content:hover {
+    transform: scale(1.05);
+}
+
+.container-doc-content {
+    padding: 3rem;
+    align-items: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.container-doc-content.active .accordion-content {
+    padding: 1rem;
+    background-color: #31c8e6;
+    max-height: 600px;
     overflow: hidden;
+    width: 70%;
+
+}
+
+
+.accordion-content{
+    background-color: #31c8e6;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 1;
+    width: 70%;
+    border-radius: 0 0 50px 50px;
 }
 
 .accordion {
-    text-align: center;
     cursor: pointer;
-    padding: 20px;
+    padding: 2rem;
+    width: 70%;
     margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #1214da;
 }
 
-.accordion h3{
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:#1214da;
+    padding: 2rem;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: border-radius 3s ease;
 
+}
+
+.container-doc-content.active .accordion-header {
+    border-radius: 50px 50px 0 0;
+    transition: border-radius 0.1s ease;
+}
+
+.accordion-header h3 {
+    margin: 0;
+}
+
+.accordion-header button {
+    background-color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header button:hover {
+    background-color: #ccc;
 }
