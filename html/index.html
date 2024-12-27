@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Accueil - Fédération Curistes</title>
-    <script type="module" src="index.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script type="module" src="../js/index.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/footer-modern.css">
 </head>
 <body>
 
@@ -15,7 +16,7 @@
     <div class="container">
         <div class="logo">
           <a href="index.html">
-            <img src="img/logoffcm.png" alt="Logo FFCM" >
+            <img src="../img/logoffcm.png" alt="Logo FFCM" >
           </a>
         </div>
          <!-- FIN LOGO -->
@@ -48,21 +49,25 @@
                 <li class="buttonmenu"> <a href="#contact">Actualités</a></li>
                 <li class="buttonmenu"> <a href="https://www.ffcm.info/annonceurs">Nos Annonceurs</a></li>
                 <li class="buttonmenu">  <a href="#contact">Adhésion</a></li>
-                <li class="buttonmenu"> <a href="Aproposdenous.html">À propos de nous</a></li>
+                <li class="buttonmenu"> <a href="aproposdenous.html">À propos de nous</a></li>
 
             </ul>
         </nav>
          <!-- FIN BARRE MENU  -->
         
 
-                <!-- BARRE DE RECHERCHE -->
-                <form class="search-form" action="search.html" method="GET">
-                    <input type="text" placeholder="Rechercher..." name="query" class="search-input">
-                    <button type="submit" class="search-button">Rechercher</button>
-                </form>
-                 <!-- FIN BARRE DE RECHERCHE -->
+        <!-- BARRE DE RECHERCHE -->
+        <div class="search-box">
+            <div class="search-row">
+                <input class="search-input" type="text" id="input-box" placeholder="Rechercher..." autocomplete="off">
+                <button type="submit" class="search-button">Rechercher</button>
+            </div>
+            <div class="result-box" id="result-box" style="display: none;">
+                <!-- Suggestions s'afficheront ici -->
+            </div>
+        </div>
+        <!-- FIN BARRE DE RECHERCHE -->
     </div>
-    
 </header>
 
 
@@ -84,7 +89,7 @@
         <h2>Les dernières actualités du thermalisme</h2>
         <div class="actualites-grid">
             <div class="actualite-card">
-                <img src="img/education-therapeutique.jpg" alt="Éducation Thérapeutique">
+                <img src="../img/education-therapeutique.jpg" alt="Éducation Thérapeutique">
                 <div class="actualite-content">
                     <span>Publié le 17/10/2024</span>
                     <h3>L’Éducation Thérapeutique du Patient pendant sa cure thermale. Pourquoi et pour qui ?</h3>
@@ -92,7 +97,7 @@
                 </div>
             </div>
             <div class="actualite-card">
-                <img src="img/cure-cancer.jpg" alt="Cure post-cancer">
+                <img src="../img/cure-cancer.jpg" alt="Cure post-cancer">
                 <div class="actualite-content">
                     <span>Publié le 15/10/2024</span>
                     <h3>Prise en charge de la cure post-cancer du sein de 12 jours</h3>
@@ -144,19 +149,19 @@
     
     <div class="event-cards">
         <div class="event-card">
-            <img src="img/inhalation-vernet-valvital.jpg" alt="Événement 1">
+            <img src="../img/inhalation-vernet-valvital.jpg" alt="Événement 1">
             <h3>Événement Actuel</h3>
             <p>Description de l'événement en cours...</p>
         </div>
         
         <div class="event-card">
-            <img src="img/cure-cancer.jpg" alt="Événement 2">
+            <img src="../img/cure-cancer.jpg" alt="Événement 2">
             <h3>Événement à Venir</h3>
             <p>Description d'un événement futur...</p>
         </div>
         
         <div class="event-card">
-            <img src="img/guide-remboursement-cure-thermale.png" alt="Événement 3">
+            <img src="../img/guide-remboursement-cure-thermale.png" alt="Événement 3">
             <h3>Événement Passé</h3>
             <p>Description d'un événement passé...</p>
         </div>
@@ -167,19 +172,19 @@
     <!-- Section cachée des événements supplémentaires -->
     <div class="more-events" style="display: none;">
         <div class="event-card">
-            <img src="img/LOGOP4.jpeg" alt="Événement 4">
+            <img src="../img/LOGOP4.jpeg" alt="Événement 4">
             <h3>Autre Événement Actuel</h3>
             <p>Description supplémentaire...</p>
         </div>
         
         <div class="event-card">
-            <img src="img/LOGOP5.jpeg" alt="Événement 5">
+            <img src="../img/LOGOP5.jpeg" alt="Événement 5">
             <h3>Autre Événement à Venir</h3>
             <p>Description supplémentaire...</p>
         </div>
         
         <div class="event-card">
-            <img src="img/LOGOP2.jpeg" alt="Événement 6">
+            <img src="../img/LOGOP2.jpeg" alt="Événement 6">
             <h3>Autre Événement Passé</h3>
             <p>Description supplémentaire...</p>
         </div>
@@ -220,10 +225,10 @@
           <!-- Section Logos -->
           <div class="footer-logos">
         
-              <img src="img/LOGOP2.jpeg" alt="Logo Partenaire 2">
-              <img src="img/LOGOP3.jpeg" alt="Logo Partenaire 3">
-              <img src="img/LOGOP4.jpeg" alt="Logo Partenaire 4">
-              <img src="img/LOGOP5.jpeg" alt="Logo Partenaire 5">
+              <img src="../img/LOGOP2.jpeg" alt="Logo Partenaire 2">
+              <img src="../img/LOGOP3.jpeg" alt="Logo Partenaire 3">
+              <img src="../img/LOGOP4.jpeg" alt="Logo Partenaire 4">
+              <img src="../img/LOGOP5.jpeg" alt="Logo Partenaire 5">
               
               <!-- Ajouter d'autres logos ici -->
           </div>
@@ -231,7 +236,7 @@
           <!-- Liens rapides -->
           <div class="footer-links">
               <a href="index.html">Accueil</a>
-              <a href="Aproposdenous.html">À propos</a>
+              <a href="aproposdenous.html">À propos</a>
               <a href="#contact">Contact</a>
               <a href="#legal">Mentions légales</a>
               <a href="#privacy">Politique de confidentialité</a>
@@ -239,9 +244,9 @@
   
           <!-- Réseaux sociaux -->
           <div class="footer-social">
-              <a href="https://facebook.com" target="_blank"><img src="img/ICONSSOCIAL/logo-facebook.png" alt="Facebook" ></a>
-              <a href="https://twitter.com" target="_blank"><img src="img/ICONSSOCIAL/logo-X.jpg" alt="Twitter"></a>
-              <a href="https://instagram.com" target="_blank"><img src="img/ICONSSOCIAL/logo-instagram.png" alt="Instagram"></a>
+              <a href="https://facebook.com" target="_blank"><img src="../img/ICONSSOCIAL/logo-facebook.png" alt="Facebook" ></a>
+              <a href="https://twitter.com" target="_blank"><img src="../img/ICONSSOCIAL/logo-X.jpg" alt="Twitter"></a>
+              <a href="https://instagram.com" target="_blank"><img src="../img/ICONSSOCIAL/logo-instagram.png" alt="Instagram"></a>
           </div>
   
           <!-- Informations de contact -->

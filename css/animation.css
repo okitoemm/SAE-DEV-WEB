@@ -1,0 +1,245 @@
+
+/* Animations pour le header */
+header {
+    animation: slideDown 0.8s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Animation du logo */
+header .logo img {
+    animation: rotateLogo 1.2s ease-out;
+}
+
+@keyframes rotateLogo {
+    from {
+        transform: rotate(-360deg) scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: rotate(0) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Animation des liens de navigation */
+nav ul li {
+    opacity: 0;
+    animation: slideInRight 0.5s ease forwards;
+}
+
+nav ul li:nth-child(1) { animation-delay: 0.2s; }
+nav ul li:nth-child(2) { animation-delay: 0.3s; }
+nav ul li:nth-child(3) { animation-delay: 0.4s; }
+nav ul li:nth-child(4) { animation-delay: 0.5s; }
+nav ul li:nth-child(5) { animation-delay: 0.6s; }
+nav ul li:nth-child(6) { animation-delay: 0.7s; }
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Effet hover amélioré pour les liens */
+nav ul li a {
+    position: relative;
+    overflow: hidden;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #e68a00;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Animation de la bannière */
+.banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0,0,0,0.6), rgba(0,0,0,0.3));
+    animation: fadeIn 1.5s ease;
+}
+
+.banner h1 {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease 0.5s forwards;
+}
+
+.banner p {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease 0.7s forwards;
+}
+
+.banner .btn-primary {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease 0.9s forwards;
+}
+
+/* Animation des actualités */
+.actualite-card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.actualites-grid:nth-child(1) .actualite-card:nth-child(1) { animation-delay: 0.2s; }
+.actualites-grid:nth-child(1) .actualite-card:nth-child(2) { animation-delay: 0.4s; }
+.actualites-grid:nth-child(1) .actualite-card:nth-child(3) { animation-delay: 0.6s; }
+
+/* Animation des événements */
+.event-card {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: scaleIn 0.8s ease forwards;
+}
+
+.event-card:nth-child(1) { animation-delay: 0.3s; }
+.event-card:nth-child(2) { animation-delay: 0.5s; }
+.event-card:nth-child(3) { animation-delay: 0.7s; }
+.event-card:nth-child(4) { animation-delay: 0.9s; }
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Animation au scroll */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation du bouton Voir Plus */
+.see-more-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.see-more-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.2), rgba(255,255,255,0));
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    to {
+        left: 200%;
+    }
+}
+
+/* Animation des statistiques */
+.stats-section .stat-item {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.stats-section .stat-item:nth-child(1) { animation-delay: 0.2s; }
+.stats-section .stat-item:nth-child(2) { animation-delay: 0.4s; }
+.stats-section .stat-item:nth-child(3) { animation-delay: 0.6s; }
+.stats-section .stat-item:nth-child(4) { animation-delay: 0.8s; }
+
+/* Animation pour la barre de recherche */
+.search-form {
+    animation: fadeIn 1s ease 0.8s forwards;
+    opacity: 0;
+}
+
+.search-input {
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Animations globales */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation pour le menu mobile */
+@media (max-width: 768px) {
+    nav.active {
+        animation: slideInLeft 0.3s ease forwards;
+    }
+
+    @keyframes slideInLeft {
+        from {
+            right: -100%;
+        }
+        to {
+            right: 0;
+        }
+    }
+
+    .menu-toggle .bar {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+}

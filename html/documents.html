@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="documents.css">
-    <script type="module" src="index.js"></script>
-    <script type="module" src="documents.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/documents.css">
+    <script type="module" src="../js/index.js"></script>
+    <script type="module" src="../js/documents.js"></script>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo">
                 <a href="index.html"   >
-                    <img src="img/logoffcm.png" alt="Logo FFCM" >
+                    <img src="../img/logoffcm.png" alt="Logo FFCM" >
                 </a>
             </div>
             <!-- FIN LOGO -->
@@ -50,7 +50,7 @@
                     <li class="buttonmenu"> <a href="#contact">Actualités</a></li>
                     <li class="buttonmenu"> <a href="https://www.ffcm.info/annonceurs">Nos Annonceurs</a></li>
                     <li class="buttonmenu">  <a href="#contact">Adhésion</a></li>
-                    <li class="buttonmenu"> <a href="Aproposdenous.html">À propos de nous</a></li>
+                    <li class="buttonmenu"> <a href="aproposdenous.html">À propos de nous</a></li>
 
                 </ul>
             </nav>
@@ -58,10 +58,15 @@
 
 
             <!-- BARRE DE RECHERCHE -->
-            <form class="search-form" action="search.html" method="GET">
-                <input type="text" placeholder="Rechercher..." name="query" class="search-input">
-                <button type="submit" class="search-button">Rechercher</button>
-            </form>
+            <div class="search-box">
+                <div class="search-row">
+                    <input class="search-input" type="text" id="input-box" placeholder="Rechercher..." autocomplete="off">
+                    <button type="submit" class="search-button">Rechercher</button>
+                </div>
+                <div class="result-box" id="result-box" style="display: none;">
+                    <!-- Suggestions s'afficheront ici -->
+                </div>
+            </div>
             <!-- FIN BARRE DE RECHERCHE -->
         </div>
 
@@ -73,25 +78,25 @@
 
         <div class="event-cards-doc">
             <div id="card1" class="event-card-doc">
-                <img src="img/cure-pratique.jpg" alt="La cure en pratique">
+                <img src="../img/cure-pratique.jpg" alt="La cure en pratique">
                 <h3>La cure en pratique </h3>
 
             </div>
 
             <div id="card2" class="event-card-doc">
-                <img src="img/nos-actions.jpg" alt="Nos actions">
+                <img src="../img/nos-actions.jpg" alt="Nos actions">
                 <h3>Nos actions</h3>
 
             </div>
 
             <div id="card3" class="event-card-doc">
-                <img src="img/divers.png" alt="Divers">
+                <img src="../img/divers.png" alt="Divers">
                 <h3>Divers</h3>
 
             </div>
 
             <div id="card4" class="event-card-doc">
-                <img src="img/logoffcm.png" alt="Vie de la FFCM">
+                <img src="../img/logoffcm.png" alt="Vie de la FFCM">
                 <h3>Vie de la FFCM</h3>
 
             </div>
@@ -198,10 +203,10 @@
             <!-- Section Logos -->
             <div class="footer-logos">
 
-                <img src="img/LOGOP2.jpeg" alt="Logo Partenaire 2">
-                <img src="img/LOGOP3.jpeg" alt="Logo Partenaire 3">
-                <img src="img/LOGOP4.jpeg" alt="Logo Partenaire 4">
-                <img src="img/LOGOP5.jpeg" alt="Logo Partenaire 5">
+                <img src="../img/LOGOP2.jpeg" alt="Logo Partenaire 2">
+                <img src="../img/LOGOP3.jpeg" alt="Logo Partenaire 3">
+                <img src="../img/LOGOP4.jpeg" alt="Logo Partenaire 4">
+                <img src="../img/LOGOP5.jpeg" alt="Logo Partenaire 5">
 
                 <!-- Ajouter d'autres logos ici -->
             </div>
@@ -209,7 +214,7 @@
             <!-- Liens rapides -->
             <div class="footer-links">
                 <a href="index.html">Accueil</a>
-                <a href="Aproposdenous.html">À propos</a>
+                <a href="aproposdenous.html">À propos</a>
                 <a href="#contact">Contact</a>
                 <a href="#legal">Mentions légales</a>
                 <a href="#privacy">Politique de confidentialité</a>
@@ -217,9 +222,9 @@
 
             <!-- Réseaux sociaux -->
             <div class="footer-social">
-                <a href="https://facebook.com" target="_blank"><img src="img/ICONSSOCIAL/logo-facebook.png" alt="Facebook" ></a>
-                <a href="https://twitter.com" target="_blank"><img src="img/ICONSSOCIAL/logo-X.jpg" alt="Twitter"></a>
-                <a href="https://instagram.com" target="_blank"><img src="img/ICONSSOCIAL/logo-instagram.png" alt="Instagram"></a>
+                <a href="https://facebook.com" target="_blank"><img src="../img/ICONSSOCIAL/logo-facebook.png" alt="Facebook" ></a>
+                <a href="https://twitter.com" target="_blank"><img src="../img/ICONSSOCIAL/logo-X.jpg" alt="Twitter"></a>
+                <a href="https://instagram.com" target="_blank"><img src="../img/ICONSSOCIAL/logo-instagram.png" alt="Instagram"></a>
             </div>
 
             <!-- Informations de contact -->
