@@ -1,0 +1,141 @@
+/* SECTION Actualités */
+
+
+
+
+.actualites {
+    padding: 40px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.actualites h2 {
+    font-size: 2rem;
+    color: #007BFF;
+    margin-bottom: 30px;
+}
+
+/* Grille des actualités */
+.actualites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Carte individuelle d'actualité */
+.actualite-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.actualite-card:hover {
+    transform: scale(1.05);
+}
+
+/* Image dans chaque carte */
+.actualite-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Contenu des cartes */
+.actualite-content {
+    padding: 15px;
+}
+
+.actualite-content h3 {
+    font-size: 1.25rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.actualite-content p {
+    font-size: 0.95rem;
+    color: #777;
+}
+
+/* Style des dates et autres informations */
+.actualite-content span {
+    display: block;
+    font-size: 0.85rem;
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .actualites-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Améliore le carrousel pour le responsive */
+.carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 100%;
+    display: flex;
+    scroll-snap-type: x mandatory;
+    background-color: white;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* Pour activer le défilement horizontal */
+    scroll-snap-type: x mandatory; /* Activer le défilement par élément */
+    padding: 20px 0;
+    -webkit-overflow-scrolling: touch; /* Pour un défilement fluide sur mobile */
+    background-color: white;
+}
+
+.actualite-card {
+    min-width: 300px;
+    max-width: 300px;
+    flex-shrink: 0;
+    scroll-snap-align: start; /* Aligne chaque élément du carousel pour un défilement par "snap" */
+}
+
+
+/* Boutons de défilement ajustés */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 2rem;
+    z-index: 1;
+}
+
+.carousel-btn.left {
+    left: 10px;
+}
+
+.carousel-btn.right {
+    right: 10px;
+}
+
+/* Ajustements supplémentaires pour petits écrans */
+@media (max-width: 768px) {
+    .actualite-card {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .carousel {
+        gap: 10px;
+    }
+    .carousel-btn {
+        font-size: 1.5rem;
+    }
+}

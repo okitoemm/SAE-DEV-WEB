@@ -203,22 +203,35 @@ body {
         width: 100%;
     }
 
+    .accordion, .accordion-header, .container-doc-content .accordion-content {
+        width: 100%;
+    }
+
 
 }
 
-/* Écrans moyens (entre 600px et 900px) */
+
 @media (min-width: 600px) and (max-width: 900px) {
     .event-card-doc {
-        width: 48%;
+        width: 100%;
+    }
+
+    .event-card-doc img {
+        width: 80%;
     }
 
     .accordion, .accordion-header, .container-doc-content.active .accordion-content {
         width: 100%;
     }
 
+    .accordion, .accordion-header, .container-doc-content .accordion-content {
+        width: 100%;
+    }
+
+
 }
 
-/* Écrans larges (plus de 900px) */
+
 @media (min-width: 900px) {
     .event-card-doc {
         width: 30%;

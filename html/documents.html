@@ -2,22 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Documents FFCM</title>
+
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/documents.css">
+    <link rel="stylesheet" href="../css/footer-modern.css">
+
     <script type="module" src="../js/index.js"></script>
     <script type="module" src="../js/documents.js"></script>
 </head>
+
 <body>
     <header>
         <div class="container">
             <div class="logo">
                 <a href="index.html"   >
-                    <img src="../img/logoffcm.png" alt="Logo FFCM" >
+                    <img src="../img/ImgsAccueil/logoSite/logoffcm.png" alt="Logo FFCM" >
                 </a>
             </div>
             <!-- FIN LOGO -->
-
+            <div class="auth-buttons">
+                <a href="connexion.html" class="btn-auth">Connexion</a>
+            </div>
 
 
             <!-- Hamburger icon for mobile -->
@@ -47,9 +53,9 @@
                             </div>
                         </li>
                     </li>
-                    <li class="buttonmenu"> <a href="#contact">Actualités</a></li>
+                    <li class="buttonmenu"> <a href="actualites.html">Actualités</a></li>
                     <li class="buttonmenu"> <a href="https://www.ffcm.info/annonceurs">Nos Annonceurs</a></li>
-                    <li class="buttonmenu">  <a href="#contact">Adhésion</a></li>
+                    <li class="buttonmenu">  <a href="adhesion.html">Adhésion</a></li>
                     <li class="buttonmenu"> <a href="aproposdenous.html">À propos de nous</a></li>
 
                 </ul>
@@ -78,25 +84,25 @@
 
         <div class="event-cards-doc">
             <div id="card1" class="event-card-doc">
-                <img src="../img/cure-pratique.jpg" alt="La cure en pratique">
+                <img src="../img/ImgdDocuments/cure-pratique.jpg" alt="La cure en pratique">
                 <h3>La cure en pratique </h3>
 
             </div>
 
             <div id="card2" class="event-card-doc">
-                <img src="../img/nos-actions.jpg" alt="Nos actions">
+                <img src="../img/ImgdDocuments/nos-actions.jpg" alt="Nos actions">
                 <h3>Nos actions</h3>
 
             </div>
 
             <div id="card3" class="event-card-doc">
-                <img src="../img/divers.png" alt="Divers">
+                <img src="../img/ImgdDocuments/divers.png" alt="Divers">
                 <h3>Divers</h3>
 
             </div>
 
             <div id="card4" class="event-card-doc">
-                <img src="../img/logoffcm.png" alt="Vie de la FFCM">
+                <img src="../img/ImgdDocuments/logoffcm.png" alt="Vie de la FFCM">
                 <h3>Vie de la FFCM</h3>
 
             </div>
@@ -197,56 +203,148 @@
     <!--Fin des accordéons-->
 
     <!--FIN  SECTION DOCUMENTS-->
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <!-- Section Logos -->
-            <div class="footer-logos">
+    <!-- FOOTER -->
+    <footer class="footer-modern">
+        <div class="footer-top">
+            <div class="container">
 
-                <img src="../img/LOGOP2.jpeg" alt="Logo Partenaire 2">
-                <img src="../img/LOGOP3.jpeg" alt="Logo Partenaire 3">
-                <img src="../img/LOGOP4.jpeg" alt="Logo Partenaire 4">
-                <img src="../img/LOGOP5.jpeg" alt="Logo Partenaire 5">
+                <!-- Section Mission -->
+                <div class="footer-section mission-section">
+                    <div class="footer-logo">
+                        <img src="../img/ImgsAccueil/logoSite/logoffcm.png" alt="FFCM Logo">
+                        <div class="certification-badges">
+                            <span class="certification-badge">Association Loi 1901</span>
+                            <span class="certification-badge">Agréée Ministère de la Santé</span>
+                        </div>
+                    </div>
+                    <p class="mission-text">La Fédération Française des Curistes Médicalisés œuvre pour la défense des droits des curistes et la promotion du thermalisme médical en France.</p>
+                </div>
 
-                <!-- Ajouter d'autres logos ici -->
+                <!-- Section Navigation -->
+                <div class="footer-section links-section">
+                    <div class="footer-col">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="adhesion.html">Devenir adhérent</a></li>
+                            <li><a href="documents.html">Documents utiles</a></li>
+                            <li><a href="actualites.html">Actualités thermales</a></li>
+                            <li><a href="guide-cure.html">Guide des cures</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Informations</h4>
+                        <ul>
+                            <li><a href="aproposdenous.html">Qui sommes-nous ?</a></li>
+                            <li><a href="partenaires.html">Nos partenaires</a></li>
+                            <li><a href="temoignages.html">Témoignages</a></li>
+                            <li><a href="contact.html">Nous contacter</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Espace membre</h4>
+                        <ul>
+                            <li><a href="../html/connexion.html">Se connecter</a></li>
+                            <li><a href="inscription.html">Créer un compte</a></li>
+                            <li><a href="espace-membre.html">Mon espace</a></li>
+                            <li><a href="faq.html">Aide & FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Section Contact et Newsletter -->
+                <div class="footer-section contact-section">
+                    <div class="contact-info">
+                        <h4>Contact</h4>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p>2 rue des Frères Rodriguez<br>72700 Allonnes</p>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone-alt"></i>
+                                <p>06.83.27.22.80<br>02.43.21.65.78</p>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <p>ffcm@libertysurf.fr</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="newsletter-box">
+                        <h4>Restez informé</h4>
+                        <p>Recevez nos actualités et informations importantes</p>
+                        <form class="newsletter-form">
+                            <div class="form-group">
+                                <input type="email" placeholder="Votre adresse email" required>
+                                <button type="submit">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                            <label class="consent-checkbox">
+                                <input type="checkbox" required>
+                                <span>J'accepte de recevoir la newsletter de la FFCM</span>
+                            </label>
+                        </form>
+                    </div>
+                </div>
             </div>
+        </div>
 
-            <!-- Liens rapides -->
-            <div class="footer-links">
-                <a href="index.html">Accueil</a>
-                <a href="aproposdenous.html">À propos</a>
-                <a href="#contact">Contact</a>
-                <a href="#legal">Mentions légales</a>
-                <a href="#privacy">Politique de confidentialité</a>
+        <!-- Section Partenaires -->
+        <div class="partners-section">
+            <div class="container">
+                <div class="partners-slider">
+                    <div class="partner-logos">
+                        <img src="../img/logopartenaires/franceassologo.png" alt="Partenaire 1">
+                        <img src="../img/logopartenaires/LOGOP1.jpeg" alt="Partenaire 2">
+                        <img src="../img/logopartenaires/LOGOP2.jpeg" alt="Partenaire 3">
+                        <img src="../img/logopartenaires/LOGOP3.jpeg" alt="Partenaire 4">
+                    </div>
+                </div>
             </div>
+        </div>
 
-            <!-- Réseaux sociaux -->
-            <div class="footer-social">
-                <a href="https://facebook.com" target="_blank"><img src="../img/ICONSSOCIAL/logo-facebook.png" alt="Facebook" ></a>
-                <a href="https://twitter.com" target="_blank"><img src="../img/ICONSSOCIAL/logo-X.jpg" alt="Twitter"></a>
-                <a href="https://instagram.com" target="_blank"><img src="../img/ICONSSOCIAL/logo-instagram.png" alt="Instagram"></a>
+        <!-- Section Réseaux Sociaux -->
+        <div class="social-section">
+            <div class="container">
+                <div class="social-links">
+                    <a href="https://facebook.com/FFCM" target="_blank" class="social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/FFCM" target="_blank" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://linkedin.com/company/ffcm" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://youtube.com/FFCM" target="_blank" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
             </div>
+        </div>
 
-            <!-- Informations de contact -->
-            <div class="footer-contact">
-                <p>Adresse : 123 Rue de la Santé, 75000 Paris, France</p>
-                <p>Email : contact@ffcm.com</p>
-                <p>Téléphone : +33 1 23 45 67 89</p>
-            </div>
-
-            <!-- Newsletter -->
-            <div class="footer-newsletter">
-                <h3>Inscrivez-vous à notre newsletter</h3>
-                <form>
-                    <input type="email" placeholder="Votre email">
-                    <button type="submit">S'inscrire</button>
-                </form>
-            </div>
-
-            <!-- Mentions légales -->
-            <div class="footer-legal">
-                <p>&copy; 2024 FFCM - Tous droits réservés</p>
-                <a href="#privacy">Politique de confidentialité</a> | <a href="#legal">Mentions légales</a>
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <div class="copyright">
+                        <p>&copy; 2024 FFCM - Tous droits réservés</p>
+                    </div>
+                    <div class="legal-links">
+                        <a href="mentions-legales.html">Mentions légales</a>
+                        <a href="confidentialite.html">Politique de confidentialité</a>
+                        <a href="cookies.html">Gestion des cookies</a>
+                        <a href="accessibilite.html">Accessibilité</a>
+                    </div>
+                    <div class="security-badges">
+                        <img src="../img/ImgsAccueil/logoSite/RGPDHome.jpg" alt="RGPD Compliant">
+                        <img src="../img/ImgsAccueil/logoSite/6472048.png" alt="SSL Secure">
+                    </div>
+                </div>
             </div>
         </div>
     </footer>

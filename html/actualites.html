@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/actualites.css">
+  <link rel="stylesheet" href="../css/footer-modern.css">
+
+  <script type="module" src="../js/actualites.js"></script>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="logo">
+      <a href="index.html"   >
+        <img src="../img/ImgsAccueil/logoSite/logoffcm.png" alt="Logo FFCM" >
+      </a>
+    </div>
+    <!-- FIN LOGO -->
+
+
+
+    <!-- Hamburger icon for mobile -->
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <!-- BARRE MENU  -->
+    <nav>
+      <ul class="nav-links" id="nav-links">
+        <li class="buttonmenu"> <a href="index.html">Accueil</a> </li>
+        <li class="buttonmenu">
+        <li class="dropdown-button buttonmenu">
+          <a href="documents.html">Documents</a>
+          <div class="dropdown-content">
+            <a href="https://www.ffcm.info/liens-utiles">Liens Utiles</a>
+            <a href="https://www.ffcm.info/statistiques">Statistiques</a>
+            <a href="https://www.ffcm.info/copie-de-medias">Médias</a>
+            <a href="https://www.ffcm.info/archives-c10uc">Archives</a>
+            <a href="https://www.ffcm.info/livres-conseills">Livres conseillés</a>
+          </div>
+        </li>
+
+        <li class="buttonmenu"> <a href="#">Actualités</a></li>
+        <li class="buttonmenu"> <a href="https://www.ffcm.info/annonceurs">Nos Annonceurs</a></li>
+        <li class="buttonmenu">  <a href="adhesion.html">Adhésion</a></li>
+        <li class="buttonmenu"> <a href="aproposdenous.html">À propos de nous</a></li>
+
+      </ul>
+    </nav>
+    <!-- FIN BARRE MENU  -->
+
+
+    <!-- BARRE DE RECHERCHE -->
+    <form class="search-form" action="search.html" method="GET">
+      <input type="text" placeholder="Rechercher..." name="query" class="search-input">
+      <button type="submit" class="search-button">Rechercher</button>
+    </form>
+    <!-- FIN BARRE DE RECHERCHE -->
+  </div>
+
+</header>
+
+<!-- Section Actualités -->
+<div class="carousel-wrapper">
+  <button class="carousel-btn left" onclick="scrollCarousel(-1)">&#10094;</button>
+
+  <div class="carousel actualites-grid">
+    <!-- Actualité 1-->
+    <div class="actualite-card">
+      <img src="../img/ImgsActualites/image1.jpg" alt="Éducation Thérapeutique">
+      <div class="actualite-content">
+        <span>Publié le 17/10/2024</span>
+        <h3>L’Éducation Thérapeutique du Patient pendant sa cure thermale</h3>
+        <p>Découvrez comment l’éducation Thérapeutique en cure thermale aide les patients à mieux gérer leur maladie et à améliorer leur autonomie.</p>
+      </div>
+    </div>
+
+    <!-- Actualité 2-->
+    <div class="actualite-card">
+      <img src="../img/ImgsActualites/image2.jpg" alt="Cure post-cancer">
+      <div class="actualite-content">
+        <span>Publié le 15/10/2024</span>
+        <h3>Prise en charge de la cure post-cancer</h3>
+        <p>Cure post-cancer</p>
+      </div>
+    </div>
+    <!-- Actualité 3-->
+    <div class="actualite-card">
+      <img src="../img/ImgsActualites/image3.jpg" alt="Éducation Thérapeutique">
+      <div class="actualite-content">
+        <span>Publié le 08/10/2024</span>
+        <h3>Suis-je éligible à une cure thermale conventionée ?</h3>
+        <p>Découvrez les critères pour bénéficier d’une prise en charge.</p>
+      </div>
+    </div>
+    <!-- Actualité 4-->
+    <div class="actualite-card">
+      <img src="../img/ImgsActualites/image4.jpg" alt="Éducation Thérapeutique">
+      <div class="actualite-content">
+        <span>Publié le 02/10/2024</span>
+        <h3>Cure thermale pour voies respiratoires</h3>
+        <p>Un traitement naturel pour améliorer votre santé respiratoire.</p>
+      </div>
+    </div>
+    <!-- Actualité 5-->
+    <div class="actualite-card">
+      <img src="../img/ImgsActualites/image5.jpg" alt="Cure post-cancer">
+      <div class="actualite-content">
+        <span>Publié le 29/09/2024</span>
+        <h3>Arthrose : où faire une cure thermale ?</h3>
+        <p>Cure post-cancer</p>
+      </div>
+    </div>
+    <!-- Actualité 6-->
+    <div class="actualite-card">
+      <img src="../img/ImgsActualites/image3.jpg" alt="Éducation Thérapeutique">
+      <div class="actualite-content">
+        <span>Publié le 17/10/2024</span>
+        <h3>L’Éducation Thérapeutique du Patient pendant sa cure thermale</h3>
+        <p>Découvrez les bienfaits et l'importance de l'éducation thérapeutique en cure thermale.</p>
+      </div>
+    </div>
+    <!-- Actualité 7-->
+    <div class="actualite-card">
+      <img src="../img/ImgsActualites/image1.jpg" alt="Éducation Thérapeutique">
+      <div class="actualite-content">
+        <span>Publié le 17/10/2024</span>
+        <h3>L’Éducation Thérapeutique du Patient pendant sa cure thermale</h3>
+        <p>[...]</p>
+      </div>
+    </div>
+
+    <!-- Actualité 8-->
+    <div class="actualite-card">
+      <img src="../img/ImgsActualites/image2.jpg" alt="Cure post-cancer">
+      <div class="actualite-content">
+        <span>Publié le 15/10/2024</span>
+        <h3>Prise en charge de la cure post-cancer</h3>
+        <p>Cure post-cancer</p>
+      </div>
+    </div>
+    <!-- Actualité 9-->
+    <div class="actualite-card">
+      <img src="../img/ImgsActualites/image3.jpg" alt="Éducation Thérapeutique">
+      <div class="actualite-content">
+        <span>Publié le 17/10/2024</span>
+        <h3>L’Éducation Thérapeutique du Patient pendant sa cure thermale</h3>
+        <p>Découvrez les bienfaits et l'importance de l'éducation thérapeutique en cure thermale.</p>
+      </div>
+    </div>
+    <!-- Actualité 10-->
+    <div class="actualite-card">
+      <img src="../img/ImgsActualites/image1.jpg" alt="Éducation Thérapeutique">
+      <div class="actualite-content">
+        <span>Publié le 17/10/2024</span>
+        <h3>L’Éducation Thérapeutique du Patient pendant sa cure thermale</h3>
+        <p>[...]</p>
+      </div>
+    </div>
+    <!-- Actualité 11-->
+    <div class="actualite-card">
+      <img src="../img/ImgsActualites/image2.jpg" alt="Cure post-cancer">
+      <div class="actualite-content">
+        <span>Publié le 15/10/2024</span>
+        <h3>Prise en charge de la cure post-cancer</h3>
+        <p>Cure post-cancer</p>
+      </div>
+    </div>
+    <!-- Actualité 12-->
+    <div class="actualite-card">
+      <img src="../img/ImgsActualites/image3.jpg" alt="Éducation Thérapeutique">
+      <div class="actualite-content">
+        <span>Publié le 17/10/2024</span>
+        <h3>L’Éducation Thérapeutique du Patient pendant sa cure thermale</h3>
+        <p>Découvrez les bienfaits et l'importance de l'éducation thérapeutique en cure thermale.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="carousel-btn right" onclick="scrollCarousel(1)">&#10095;</button>
+</div>
+
+
+
+<!-- Footer -->
+<!-- FOOTER -->
+<footer class="footer-modern">
+  <div class="footer-top">
+    <div class="container">
+
+      <!-- Section Mission -->
+      <div class="footer-section mission-section">
+        <div class="footer-logo">
+          <img src="../img/ImgsAccueil/logoSite/logoffcm.png" alt="FFCM Logo">
+          <div class="certification-badges">
+            <span class="certification-badge">Association Loi 1901</span>
+            <span class="certification-badge">Agréée Ministère de la Santé</span>
+          </div>
+        </div>
+        <p class="mission-text">La Fédération Française des Curistes Médicalisés œuvre pour la défense des droits des curistes et la promotion du thermalisme médical en France.</p>
+      </div>
+
+      <!-- Section Navigation -->
+      <div class="footer-section links-section">
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="adhesion.html">Devenir adhérent</a></li>
+            <li><a href="documents.html">Documents utiles</a></li>
+            <li><a href="actualites.html">Actualités thermales</a></li>
+            <li><a href="guide-cure.html">Guide des cures</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Informations</h4>
+          <ul>
+            <li><a href="aproposdenous.html">Qui sommes-nous ?</a></li>
+            <li><a href="partenaires.html">Nos partenaires</a></li>
+            <li><a href="temoignages.html">Témoignages</a></li>
+            <li><a href="contact.html">Nous contacter</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Espace membre</h4>
+          <ul>
+            <li><a href="../html/connexion.html">Se connecter</a></li>
+            <li><a href="inscription.html">Créer un compte</a></li>
+            <li><a href="espace-membre.html">Mon espace</a></li>
+            <li><a href="faq.html">Aide & FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section Contact et Newsletter -->
+      <div class="footer-section contact-section">
+        <div class="contact-info">
+          <h4>Contact</h4>
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>2 rue des Frères Rodriguez<br>72700 Allonnes</p>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <p>06.83.27.22.80<br>02.43.21.65.78</p>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <p>ffcm@libertysurf.fr</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="newsletter-box">
+          <h4>Restez informé</h4>
+          <p>Recevez nos actualités et informations importantes</p>
+          <form class="newsletter-form">
+            <div class="form-group">
+              <input type="email" placeholder="Votre adresse email" required>
+              <button type="submit">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+            <label class="consent-checkbox">
+              <input type="checkbox" required>
+              <span>J'accepte de recevoir la newsletter de la FFCM</span>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section Partenaires -->
+  <div class="partners-section">
+    <div class="container">
+      <div class="partners-slider">
+        <div class="partner-logos">
+          <img src="../img/logopartenaires/franceassologo.png" alt="Partenaire 1">
+          <img src="../img/logopartenaires/LOGOP1.jpeg" alt="Partenaire 2">
+          <img src="../img/logopartenaires/LOGOP2.jpeg" alt="Partenaire 3">
+          <img src="../img/logopartenaires/LOGOP3.jpeg" alt="Partenaire 4">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section Réseaux Sociaux -->
+  <div class="social-section">
+    <div class="container">
+      <div class="social-links">
+        <a href="https://facebook.com/FFCM" target="_blank" class="social-link">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com/FFCM" target="_blank" class="social-link">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://linkedin.com/company/ffcm" target="_blank" class="social-link">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://youtube.com/FFCM" target="_blank" class="social-link">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-bottom-content">
+        <div class="copyright">
+          <p>&copy; 2024 FFCM - Tous droits réservés</p>
+        </div>
+        <div class="legal-links">
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="confidentialite.html">Politique de confidentialité</a>
+          <a href="cookies.html">Gestion des cookies</a>
+          <a href="accessibilite.html">Accessibilité</a>
+        </div>
+        <div class="security-badges">
+          <img src="../img/ImgsAccueil/logoSite/RGPDHome.jpg" alt="RGPD Compliant">
+          <img src="../img/ImgsAccueil/logoSite/6472048.png" alt="SSL Secure">
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- FIN FOOTER  -->
+
+</body>
+</html>
