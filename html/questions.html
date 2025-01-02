@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Questions- FFCM</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/footer-modern.css">
+    <link rel="stylesheet" href="../css/questions.css">
+
+    <script type="module" src="../js/questions.js"></script>
+    <script type="module" src="../js/index.js"></script>
+
+</head>
+<body>
+    <header>
+        <!-- Icone hamburger -->
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="../img/ImgsAccueil/logoSite/logoffcm.png" alt="Logo FFCM"></a>
+            </div>
+
+            <div class="auth-buttons">
+                <a href="connexion.html" class="btn-auth">Connexion</a>
+            </div>
+
+            <!-- BARRE MENU  -->
+            <nav>
+                <ul class="nav-menu" id="nav-links">
+                    <li class="buttonmenu"> <a href="index.html">Accueil</a> </li>
+                    <li class="buttonmenu">
+                    <li class="dropdown-button buttonmenu">
+                        <a href="documents.html">Documents</a>
+                        <div class="dropdown-content">
+                            <a href="https://www.ffcm.info/liens-utiles">Liens Utiles</a>
+                            <a href="https://www.ffcm.info/statistiques">Statistiques</a>
+                            <a href="https://www.ffcm.info/copie-de-medias">Médias</a>
+                            <a href="https://www.ffcm.info/archives-c10uc">Archives</a>
+                            <a href="https://www.ffcm.info/livres-conseills">Livres conseillés</a>
+                        </div>
+                    </li>
+
+                    <li class="buttonmenu"> <a href="actualites.html">Actualités</a></li>
+                    <li class="buttonmenu"> <a href="https://www.ffcm.info/annonceurs">Nos Annonceurs</a></li>
+                    <li class="buttonmenu">  <a href="adhesion.html">Adhésion</a></li>
+                    <li class="buttonmenu"> <a href="aproposdenous.html">À propos de nous</a></li>
+
+                </ul>
+            </nav>
+            <!-- FIN BARRE MENU  -->
+
+
+            <form class="search-form">
+                <input type="search" class="search-input" placeholder="Rechercher...">
+                <button type="submit" class="search-button">Rechercher</button>
+                <button type="button" class="search-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </header>
+
+    <h1 class="questions">Questionniaire de renseignement</h1>
+
+    <form id="questionnaire" action="/submit-form" method="POST">
+        <label class="questions" for="age">Quel est votre âge ?</label><br>
+        <select id="age" name="age">
+            <option value="moins_25">Moins de 25 ans</option>
+            <option value="25_40">25-40 ans</option>
+            <option value="41_60">41-60 ans</option>
+            <option value="plus_60">Plus de 60 ans</option>
+        </select><br><br>
+
+        <label class="questions">Quel est votre genre ?</label><br>
+        <input type="radio" id="homme" name="genre" value="Homme">
+        <label for="homme">Homme</label><br>
+        <input type="radio" id="femme" name="genre" value="Femme">
+        <label for="femme">Femme</label><br>
+        <input type="radio" id="autre" name="genre" value="Autre">
+        <label for="autre">Autre</label><br><br>
+
+        <label class="questions" >Dans quelle région habitez vous ?</label><br>
+        <label for="departement">Département : </label>
+        <select id="departement" name="departement">
+            <option value="01">01 - Ain</option>
+            <option value="02">02 - Aisne</option>
+            <option value="03">03 - Allier</option>
+            <option value="04">04 - Alpes-de-Haute-Provence</option>
+            <option value="05">05 - Hautes-Alpes</option>
+            <option value="06">06 - Alpes-Maritimes</option>
+            <option value="07">07 - Ardèche</option>
+            <option value="08">08 - Ardennes</option>
+            <option value="09">09 - Ariège</option>
+            <option value="10">10 - Aube</option>
+            <option value="11">11 - Aude</option>
+            <option value="12">12 - Aveyron</option>
+            <option value="13">13 - Bouches-du-Rhône</option>
+            <option value="14">14 - Calvados</option>
+            <option value="15">15 - Cantal</option>
+            <option value="16">16 - Charente</option>
+            <option value="17">17 - Charente-Maritime</option>
+            <option value="18">18 - Cher</option>
+            <option value="19">19 - Corrèze</option>
+            <option value="2A">2A - Corse-du-Sud</option>
+            <option value="2B">2B - Haute-Corse</option>
+            <option value="21">21 - Côte-d'Or</option>
+            <option value="22">22 - Côtes-d'Armor</option>
+            <option value="23">23 - Creuse</option>
+            <option value="24">24 - Dordogne</option>
+            <option value="25">25 - Doubs</option>
+            <option value="26">26 - Drôme</option>
+            <option value="27">27 - Eure</option>
+            <option value="28">28 - Eure-et-Loir</option>
+            <option value="29">29 - Finistère</option>
+            <option value="30">30 - Gard</option>
+            <option value="31">31 - Haute-Garonne</option>
+            <option value="32">32 - Gers</option>
+            <option value="33">33 - Gironde</option>
+            <option value="34">34 - Hérault</option>
+            <option value="35">35 - Ille-et-Vilaine</option>
+            <option value="36">36 - Indre</option>
+            <option value="37">37 - Indre-et-Loire</option>
+            <option value="38">38 - Isère</option>
+            <option value="39">39 - Jura</option>
+            <option value="40">40 - Landes</option>
+            <option value="41">41 - Loir-et-Cher</option>
+            <option value="42">42 - Loire</option>
+            <option value="43">43 - Haute-Loire</option>
+            <option value="44">44 - Loire-Atlantique</option>
+            <option value="45">45 - Loiret</option>
+            <option value="46">46 - Lot</option>
+            <option value="47">47 - Lot-et-Garonne</option>
+            <option value="48">48 - Lozère</option>
+            <option value="49">49 - Maine-et-Loire</option>
+            <option value="50">50 - Manche</option>
+            <option value="51">51 - Marne</option>
+            <option value="52">52 - Haute-Marne</option>
+            <option value="53">53 - Mayenne</option>
+            <option value="54">54 - Meurthe-et-Moselle</option>
+            <option value="55">55 - Meuse</option>
+            <option value="56">56 - Morbihan</option>
+            <option value="57">57 - Moselle</option>
+            <option value="58">58 - Nièvre</option>
+            <option value="59">59 - Nord</option>
+            <option value="60">60 - Oise</option>
+            <option value="61">61 - Orne</option>
+            <option value="62">62 - Pas-de-Calais</option>
+            <option value="63">63 - Puy-de-Dôme</option>
+            <option value="64">64 - Pyrénées-Atlantiques</option>
+            <option value="65">65 - Hautes-Pyrénées</option>
+            <option value="66">66 - Pyrénées-Orientales</option>
+            <option value="67">67 - Bas-Rhin</option>
+            <option value="68">68 - Haut-Rhin</option>
+            <option value="69">69 - Rhône</option>
+            <option value="70">70 - Haute-Saône</option>
+            <option value="71">71 - Saône-et-Loire</option>
+            <option value="72">72 - Sarthe</option>
+            <option value="73">73 - Savoie</option>
+            <option value="74">74 - Haute-Savoie</option>
+            <option value="75">75 - Paris</option>
+            <option value="76">76 - Seine-Maritime</option>
+            <option value="77">77 - Seine-et-Marne</option>
+            <option value="78">78 - Yvelines</option>
+            <option value="79">79 - Deux-Sèvres</option>
+            <option value="80">80 - Somme</option>
+            <option value="81">81 - Tarn</option>
+            <option value="82">82 - Tarn-et-Garonne</option>
+            <option value="83">83 - Var</option>
+            <option value="84">84 - Vaucluse</option>
+            <option value="85">85 - Vendée</option>
+            <option value="86">86 - Vienne</option>
+            <option value="87">87 - Haute-Vienne</option>
+            <option value="88">88 - Vosges</option>
+            <option value="89">89 - Yonne</option>
+            <option value="90">90 - Territoire de Belfort</option>
+            <option value="91">91 - Essonne</option>
+            <option value="92">92 - Hauts-de-Seine</option>
+            <option value="93">93 - Seine-Saint-Denis</option>
+            <option value="94">94 - Val-de-Marne</option>
+            <option value="95">95 - Val-d'Oise</option>
+            <option value="971">971 - Guadeloupe</option>
+            <option value="972">972 - Martinique</option>
+            <option value="973">973 - Guyane</option>
+            <option value="974">974 - La Réunion</option>
+            <option value="976">976 - Mayotte</option>
+        </select><br><br>
+
+
+
+        <label class="questions" >Avez-vous déjà suivi une cure thermale ?</label><br>
+        <input type="radio" id="oui" name="cure" value="Oui">
+        <label for="oui">Oui</label><br>
+        <input type="radio" id="non" name="cure" value="Non">
+        <label for="non">Non</label><br><br>
+
+        <div id="cure-details">
+            <label class="questions" for="nb_cures">Si oui, combien de fois avez-vous suivi une cure thermale ?</label><br>
+            <select id="nb_cures" name="nb_cures">
+                <option value="1">Une seule fois</option>
+                <option value="2_5">2 à 5 fois</option>
+                <option value="plus_5">Plus de 5 fois</option>
+            </select><br><br>
+
+            <label class="questions" >Pour quelles raisons avez-vous choisi une cure thermale ? (plusieurs choix possibles)</label><br>
+            <input type="checkbox" id="articulations" name="raisons[]" value="articulations">
+            <label for="articulations">Problèmes articulaires/rhumatismes</label><br>
+            <input type="checkbox" id="respiratoires" name="raisons[]" value="respiratoires">
+            <label for="respiratoires">Troubles respiratoires</label><br>
+            <input type="checkbox" id="dermatologie" name="raisons[]" value="dermatologie">
+            <label for="dermatologie">Dermatologie</label><br>
+            <input type="checkbox" id="autres" name="raisons[]" value="autres">
+            <label for="autres">Autres</label><br><br>
+        </div>
+
+        <h2 class="questions" >3. Expérience utilisateur des cures</h2>
+        <label class="questions" for="duree_cure">Quelle est la durée moyenne de vos cures thermales ?</label><br>
+        <select id="duree_cure" name="duree_cure">
+            <option value="moins_1_semaine">Moins d’une semaine</option>
+            <option value="1_2_semaines">1 à 2 semaines</option>
+            <option value="3_semaines">3 semaines (standard)</option>
+        </select><br><br>
+
+        <label class="questions" >Comment évaluez-vous votre dernière cure thermale ?</label><br>
+        <input type="radio" id="tres_satisfait" name="satisfaction" value="Très satisfaisante" required>
+        <label for="tres_satisfait">Très satisfaisante</label><br>
+        <input type="radio" id="satisfait" name="satisfaction" value="Satisfaisante" required>
+        <label for="satisfait">Satisfaisante</label><br>
+        <input type="radio" id="moyenne" name="satisfaction" value="Moyenne">
+        <label for="moyenne">Moyenne</label><br>
+        <input type="radio" id="decevante" name="satisfaction" value="Décevante">
+        <label for="decevante">Décevante</label><br><br>
+
+        <!-- Section 4 : Perception et besoins -->
+        <h2 class="questions" >4. Perception et besoins</h2>
+        <label class="questions" >Quels freins identifiez-vous pour suivre une cure thermale ?</label><br>
+        <input type="checkbox" id="temps" name="freins[]" value="temps">
+        <label for="temps">Manque de temps</label><br>
+        <input type="checkbox" id="cout" name="freins[]" value="cout">
+        <label for="cout">Coût</label><br>
+        <input type="checkbox" id="eloignement" name="freins[]" value="eloignement">
+        <label for="eloignement">Éloignement géographique</label><br>
+        <input type="checkbox" id="manque_info" name="freins[]" value="manque_info">
+        <label for="manque_info">Manque d'information</label><br><br>
+
+        <!-- Section 5 : Usage numérique -->
+        <h2 class="questions" >5. Usage numérique</h2>
+        <label class="questions" >Comment avez-vous connu la Fédération Française des Cures Médicalisées ?</label><br>
+        <select id="connaissance" name="connaissance" required>
+            <option value="internet">Recherche internet</option>
+            <option value="publicite">Publicité</option>
+            <option value="bouche_a_oreille">Bouche-à-oreille</option>
+            <option value="professionnel">Professionnel de santé</option>
+        </select><br><br>
+
+        <label class="questions" >Quel support préférez-vous utiliser pour consulter les informations sur les cures ?</label><br>
+        <input type="radio" id="smartphone" name="support" value="Smartphone" required>
+        <label for="smartphone">Smartphone</label><br>
+        <input type="radio" id="ordinateur" name="support" value="Ordinateur" required>
+        <label for="ordinateur">Ordinateur</label><br>
+        <input type="radio" id="tablette" name="support" value="Tablette" required>
+        <label for="tablette">Tablette</label><br><br>
+
+        <label class="questions" >Seriez-vous intéressé(e) par une application dédiée aux cures thermales ?</label><br>
+        <input type="radio" id="application_oui" name="application" value="Oui" required>
+        <label for="application_oui">Oui</label><br>
+        <input type="radio" id="application_non" name="application" value="Non" required>
+        <label for="application_non">Non</label><br><br>
+
+
+        <!-- Section 6 : Suggestions -->
+        <h2 class="questions" >6. Suggestions</h2>
+        <label class="questions" for="suggestions">Avez-vous des suggestions ou attentes particulières concernant le site ?</label><br>
+        <textarea id="suggestions" name="suggestions" rows="5" cols="40" placeholder="Partagez vos suggestions ici..."></textarea><br><br>
+
+        <input type="submit" value="Envoyer">
+    </form>
+
+
+    <footer class="footer-modern">
+        <div class="footer-top">
+            <div class="container">
+
+                <!-- Section Mission -->
+                <div class="footer-section mission-section">
+                    <div class="footer-logo">
+                        <img src="../img/ImgsAccueil/logoSite/logoffcm.png" alt="FFCM Logo">
+                        <div class="certification-badges">
+                            <span class="certification-badge">Association Loi 1901</span>
+                            <span class="certification-badge">Agréée Ministère de la Santé</span>
+                        </div>
+                    </div>
+                    <p class="mission-text">La Fédération Française des Curistes Médicalisés œuvre pour la défense des droits des curistes et la promotion du thermalisme médical en France.</p>
+                </div>
+
+                <!-- Section Navigation -->
+                <div class="footer-section links-section">
+                    <div class="footer-col">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="adhesion.html">Devenir adhérent</a></li>
+                            <li><a href="documents.html">Documents utiles</a></li>
+                            <li><a href="actualites.html">Actualités thermales</a></li>
+                            <li><a href="guide-cure.html">Guide des cures</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Informations</h4>
+                        <ul>
+                            <li><a href="aproposdenous.html">Qui sommes-nous ?</a></li>
+                            <li><a href="partenaires.html">Nos partenaires</a></li>
+                            <li><a href="temoignages.html">Témoignages</a></li>
+                            <li><a href="contact.html">Nous contacter</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Espace membre</h4>
+                        <ul>
+                            <li><a href="../html/connexion.html">Se connecter</a></li>
+                            <li><a href="inscription.html">Créer un compte</a></li>
+                            <li><a href="espace-membre.html">Mon espace</a></li>
+                            <li><a href="questions.html">Aide & FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Section Contact et Newsletter -->
+                <div class="footer-section contact-section">
+                    <div class="contact-info">
+                        <h4>Contact</h4>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p>2 rue des Frères Rodriguez<br>72700 Allonnes</p>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone-alt"></i>
+                                <p>06.83.27.22.80<br>02.43.21.65.78</p>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <p>ffcm@libertysurf.fr</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="newsletter-box">
+                        <h4>Restez informé</h4>
+                        <p>Recevez nos actualités et informations importantes</p>
+                        <form class="newsletter-form">
+                            <div class="form-group">
+                                <input type="email" placeholder="Votre adresse email" required>
+                                <button type="submit">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                            <label class="consent-checkbox">
+                                <input type="checkbox" required>
+                                <span>J'accepte de recevoir la newsletter de la FFCM</span>
+                            </label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Partenaires -->
+        <div class="partners-section">
+            <div class="container">
+                <div class="partners-slider">
+                    <div class="partner-logos">
+                        <img src="../img/logopartenaires/franceassologo.png" alt="Partenaire 1">
+                        <img src="../img/logopartenaires/LOGOP1.jpeg" alt="Partenaire 2">
+                        <img src="../img/logopartenaires/LOGOP2.jpeg" alt="Partenaire 3">
+                        <img src="../img/logopartenaires/LOGOP3.jpeg" alt="Partenaire 4">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Réseaux Sociaux -->
+        <div class="social-section">
+            <div class="container">
+                <div class="social-links">
+                    <a href="https://facebook.com/FFCM" target="_blank" class="social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/FFCM" target="_blank" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://linkedin.com/company/ffcm" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://youtube.com/FFCM" target="_blank" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <div class="copyright">
+                        <p>&copy; 2024 FFCM - Tous droits réservés</p>
+                    </div>
+                    <div class="legal-links">
+                        <a href="mentions-legales.html">Mentions légales</a>
+                        <a href="confidentialite.html">Politique de confidentialité</a>
+                        <a href="cookies.html">Gestion des cookies</a>
+                        <a href="accessibilite.html">Accessibilité</a>
+                    </div>
+                    <div class="security-badges">
+                        <img src="../img/ImgsAccueil/logoSite/RGPDHome.jpg" alt="RGPD Compliant">
+                        <img src="../img/ImgsAccueil/logoSite/6472048.png" alt="SSL Secure">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
