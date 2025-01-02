@@ -48,8 +48,14 @@ header nav ul li a  {
 
 /*button*/
 
+
+
 .buttonmenu a:hover{
     color: #e68a00;
+}
+
+.auth-buttons a:hover{
+    background-color: #e68a00;
 }
 
 /* Dropdown button*/
