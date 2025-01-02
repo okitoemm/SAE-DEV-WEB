@@ -1,0 +1,94 @@
+CREATE TABLE admin (
+   id_admin INT AUTO_INCREMENT PRIMARY KEY,
+   email VARCHAR(100) NOT NULL UNIQUE,
+   mot_de_passe VARCHAR(255) NOT NULL,
+   nom VARCHAR(50) NOT NULL,
+   prenom VARCHAR(50) NOT NULL,
+   niveau_acces INT DEFAULT 1,
+   derniere_connexion DATETIME,
+   date_creation DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE log_admin (
+   id_log INT AUTO_INCREMENT PRIMARY KEY,
+   id_admin INT NOT NULL,
+   type_action VARCHAR(50) NOT NULL,
+   description TEXT,
+   date_action DATETIME DEFAULT CURRENT_TIMESTAMP,
+   ip_address VARCHAR(45),
+   FOREIGN KEY (id_admin) REFERENCES admin(id_admin)
+);
+
+CREATE TABLE adherent (
+   id_adherent INT AUTO_INCREMENT PRIMARY KEY,
+   email VARCHAR(100) NOT NULL UNIQUE,
+   mot_de_passe VARCHAR(255) NOT NULL,
+   nom VARCHAR(50) NOT NULL,
+   prenom VARCHAR(50) NOT NULL,
+   date_naissance DATE ,
+   region VARCHAR(50) ,
+   ville VARCHAR(50) ,
+   date_inscription DATETIME DEFAULT CURRENT_TIMESTAMP,
+   derniere_connexion DATETIME,
+   statut ENUM('actif', 'inactif', 'suspendu') DEFAULT 'actif'
+);
+
+CREATE TABLE thematique (
+   id_thematique INT AUTO_INCREMENT PRIMARY KEY,
+   nom_thematique VARCHAR(100) NOT NULL,
+   description TEXT,
+   ordre INT NOT NULL,
+   actif BOOLEAN DEFAULT true,
+   UNIQUE KEY uk_ordre (ordre)
+);
+
+CREATE TABLE question (
+   id_question INT AUTO_INCREMENT PRIMARY KEY,
+   id_thematique INT NOT NULL,
+   texte_question TEXT NOT NULL,
+   type_question ENUM('choix_unique', 'choix_multiple', 'echelle', 'texte_libre', 'date', 'nombre') NOT NULL,
+   ordre INT NOT NULL,
+   obligatoire BOOLEAN DEFAULT true,
+   actif BOOLEAN DEFAULT true,
+   FOREIGN KEY (id_thematique) REFERENCES thematique(id_thematique),
+   UNIQUE KEY uk_ordre_theme (id_thematique, ordre)
+);
+
+CREATE TABLE option_reponse (
+   id_option INT AUTO_INCREMENT PRIMARY KEY,
+   id_question INT NOT NULL,
+   texte_option VARCHAR(255) NOT NULL,
+   ordre INT NOT NULL,
+   FOREIGN KEY (id_question) REFERENCES question(id_question) ON DELETE CASCADE,
+   UNIQUE KEY uk_ordre_question (id_question, ordre)
+);
+
+CREATE TABLE reponse (
+   id_reponse INT AUTO_INCREMENT PRIMARY KEY,
+   id_adherent INT NOT NULL,
+   id_question INT NOT NULL,
+   valeur_reponse TEXT NOT NULL,
+   date_reponse DATETIME DEFAULT CURRENT_TIMESTAMP,
+   FOREIGN KEY (id_adherent) REFERENCES adherent(id_adherent) ON DELETE CASCADE,
+   FOREIGN KEY (id_question) REFERENCES question(id_question) ON DELETE CASCADE,
+   UNIQUE KEY uk_adherent_question (id_adherent, id_question)
+);
+
+-- Index pour optimiser les requêtes
+CREATE INDEX idx_admin_email ON admin(email);
+CREATE INDEX idx_adherent_email ON adherent(email);
+CREATE INDEX idx_adherent_region ON adherent(region);
+CREATE INDEX idx_question_type ON question(type_question);
+CREATE INDEX idx_reponse_date ON reponse(date_reponse);
+
+--  admin par défaut (mot de passe: Admin123!)
+INSERT INTO admin (email, mot_de_passe, nom, prenom, niveau_acces) 
+VALUES ('admin@ffcm.fr', '$2y$10$YourHashedP', 'Admin', 'FFCM', 1);
+
+-- Insertion des thématiques de base
+INSERT INTO thematique (nom_thematique, description, ordre) VALUES
+('Profil répondant', 'Questions sur l''identité et la situation personnelle', 1),
+('Lieu de vie', 'Questions sur la région et le type d''habitat', 2),
+('Insertion professionnelle et sociale', 'Questions sur l''emploi et la vie sociale', 3),
+('Qualité de vie', 'Questions sur le bien-être et la santé', 4),
+('Besoin de soutien', 'Questions sur les besoins d''accompagnement', 5);

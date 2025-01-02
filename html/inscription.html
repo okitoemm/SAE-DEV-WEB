@@ -75,7 +75,7 @@
             <p>Rejoignez la communauté FFCM</p>
         </div>
 
-        <form id="registerForm" class="auth-form">
+        <form id="registerForm" class="auth-form" action="../php/formhandler.inc.php" method="post">
             <div class="form-group">
                 <label for="firstname">Prénom</label>
                 <input type="text" id="firstname" name="firstname" required>
@@ -117,8 +117,8 @@
             </div>
 
             <div class="form-group">
-                <label for="confirmPassword">Confirmer le mot de passe</label>
-                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <label for="confirm-password">Confirmer le mot de passe</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
                 <div class="error" id="confirmPasswordError"></div>
             </div>
 
@@ -186,7 +186,7 @@
                         <li><a href="connexion.html">Se connecter</a></li>
                         <li><a href="inscription.html">Créer un compte</a></li>
                         <li><a href="espace-membre.html">Mon espace</a></li>
-                        <li><a href="faq.html">Aide & FAQ</a></li>
+                        <li><a href="questions.html">Aide & FAQ</a></li>
                     </ul>
                 </div>
             </div>
