@@ -1,0 +1,243 @@
+body {
+    background-color: white;
+}
+
+
+/*Carte des documents*/
+.events-section-doc {
+    background-color: #f0f8ff;
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+}
+
+.events-section-doc h2 {
+    font-size: 2rem;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+
+.event-cards-doc, .more-events {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+.event-card-doc {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.event-card-doc:hover {
+    transform: scale(1.05);
+}
+
+/* Image de la carte d'événement */
+.event-card-doc img {
+    width: 50%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.event-card-doc h3 {
+    font-size: 1.5rem;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+.event-card-doc p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Animation des events card */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#card1 {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+#card2 {
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+
+#card3 {
+    opacity: 0;
+    animation: fadeIn 4s forwards;
+}
+
+#card4 {
+    opacity: 0;
+    animation: fadeIn 5s forwards;
+}
+
+/* Liste des documents */
+.container-doc-content a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Accordéon */
+.container-doc-content:hover {
+    transform: scale(1.05);
+}
+
+.container-doc-content {
+    padding: 3rem;
+    align-items: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.container-doc-content.active .accordion-content {
+
+    background-color: #31c8e6;
+    max-height: 600px;
+    overflow: hidden;
+    width: 70%;
+}
+
+.accordion-content li {
+    margin: 2rem;
+    list-style-type: none;
+}
+
+.container-doc-content.active .accordion-content li{
+    margin-left: 2rem;
+    list-style-type: none;
+}
+
+.accordion-content {
+    background-color: #31c8e6;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 1;
+    width: 70%;
+    border-radius: 0 0 50px 50px;
+
+}
+
+
+
+.accordion {
+    cursor: pointer;
+    padding: 2rem;
+    width: 70%;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #1214da;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #1214da;
+    padding: 2rem;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: border-radius 3s ease;
+}
+
+.container-doc-content.active .accordion-header {
+    border-radius: 50px 50px 0 0;
+    transition: border-radius 0.1s ease;
+}
+
+.accordion-header h3 {
+    margin: 0;
+}
+
+.accordion-header button {
+    background-color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header button:hover {
+    background-color: #ccc;
+}
+
+/* Media Queries */
+
+/* Petits écrans (moins de 600px) */
+@media (max-width: 600px) {
+    .event-card-doc {
+        width: 100%;
+    }
+
+    .event-card-doc img {
+        width: 80%;
+    }
+
+    .accordion, .accordion-header, .container-doc-content.active .accordion-content {
+        width: 100%;
+    }
+
+    .accordion, .accordion-header, .container-doc-content .accordion-content {
+        width: 100%;
+    }
+
+
+}
+
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .event-card-doc {
+        width: 100%;
+    }
+
+    .event-card-doc img {
+        width: 80%;
+    }
+
+    .accordion, .accordion-header, .container-doc-content.active .accordion-content {
+        width: 100%;
+    }
+
+    .accordion, .accordion-header, .container-doc-content .accordion-content {
+        width: 100%;
+    }
+
+
+}
+
+
+@media (min-width: 900px) {
+    .event-card-doc {
+        width: 30%;
+    }
+
+    .accordion, .accordion-header, .accordion-content {
+        width: 70%;
+    }
+}
