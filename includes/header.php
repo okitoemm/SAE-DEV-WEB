@@ -25,10 +25,13 @@
 
             <div class="auth-buttons">
                 <?php if(isset($_SESSION['user_id'])): ?>
-                    <?php if(isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
-                        <a href="admin/index.php" class="btn-auth">Admin</a>
+                   <?php if(isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
+                         <a href="admin/index.php" class="btn-auth">Admin</a>
                     <?php endif; ?>
-                    <a href="enquete_form.php" class="btn-auth">Enquête</a>
+
+                    <?php if(isset($_SESSION['role']) && $_SESSION['role'] === 'adherent'): ?>
+                        <a href="enquete_form.php" class="btn-auth">Enquête</a>
+                    <?php endif; ?>
                     <a href="logout.php" class="btn-auth">Déconnexion</a>
                 <?php else: ?>
                     <a href="connexion.php" class="btn-auth">Connexion</a>
