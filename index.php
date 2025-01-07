@@ -86,8 +86,10 @@ include 'includes/header.php';
         
         
 
+   <a href="actualites.php">
+        <button class="see-more-btn" href ="">Voir Plus</button>
 
-        <button class="see-more-btn">Voir Plus</button>
+        </a>
     </div>
 
 
