@@ -19,7 +19,7 @@ if (!isset($_SESSION['user_id'])) {
   <div class="carousel actualites-grid">
     <!-- Actualité 1-->
     <div class="actualite-card">
-      <img src="../img/ImgsActualites/image1.jpg" alt="Éducation Thérapeutique">
+      <img src="imgs/ImgsAccueil/Actualites/14645610.jpeg" alt="Éducation Thérapeutique">
       <div class="actualite-content">
         <span>Publié le 17/10/2024</span>
         <h3>L’Éducation Thérapeutique du Patient pendant sa cure thermale</h3>
@@ -29,7 +29,7 @@ if (!isset($_SESSION['user_id'])) {
 
     <!-- Actualité 2-->
     <div class="actualite-card">
-      <img src="../img/ImgsActualites/image2.jpg" alt="Cure post-cancer">
+      <img src="imgs/ImgsAccueil/Actualites/1200x680_festayre_et_curiste.jpg" alt="Cure post-cancer">
       <div class="actualite-content">
         <span>Publié le 15/10/2024</span>
         <h3>Prise en charge de la cure post-cancer</h3>
@@ -38,7 +38,7 @@ if (!isset($_SESSION['user_id'])) {
     </div>
     <!-- Actualité 3-->
     <div class="actualite-card">
-      <img src="../img/ImgsActualites/image3.jpg" alt="Éducation Thérapeutique">
+      <img src="imgs/ImgsAccueil/Actualites/Aqua-curiste_large.jpg" alt="Éducation Thérapeutique">
       <div class="actualite-content">
         <span>Publié le 08/10/2024</span>
         <h3>Suis-je éligible à une cure thermale conventionée ?</h3>
@@ -47,7 +47,7 @@ if (!isset($_SESSION['user_id'])) {
     </div>
     <!-- Actualité 4-->
     <div class="actualite-card">
-      <img src="../img/ImgsActualites/image4.jpg" alt="Éducation Thérapeutique">
+      <img src="imgs/ImgsAccueil/Actualites/club de curistes.jpg" alt="Éducation Thérapeutique">
       <div class="actualite-content">
         <span>Publié le 02/10/2024</span>
         <h3>Cure thermale pour voies respiratoires</h3>
@@ -56,7 +56,7 @@ if (!isset($_SESSION['user_id'])) {
     </div>
     <!-- Actualité 5-->
     <div class="actualite-card">
-      <img src="../img/ImgsActualites/image5.jpg" alt="Cure post-cancer">
+      <img src="imgs/ImgsAccueil/Actualites/club de curistes.jpg" alt="Cure post-cancer">
       <div class="actualite-content">
         <span>Publié le 29/09/2024</span>
         <h3>Arthrose : où faire une cure thermale ?</h3>
@@ -65,7 +65,7 @@ if (!isset($_SESSION['user_id'])) {
     </div>
     <!-- Actualité 6-->
     <div class="actualite-card">
-      <img src="../img/ImgsActualites/image3.jpg" alt="Éducation Thérapeutique">
+      <img src="imgs/ImgsAccueil/Actualites/club de curistes.jpg" alt="Éducation Thérapeutique">
       <div class="actualite-content">
         <span>Publié le 17/10/2024</span>
         <h3>L’Éducation Thérapeutique du Patient pendant sa cure thermale</h3>
@@ -74,7 +74,7 @@ if (!isset($_SESSION['user_id'])) {
     </div>
     <!-- Actualité 7-->
     <div class="actualite-card">
-      <img src="../img/ImgsActualites/image1.jpg" alt="Éducation Thérapeutique">
+      <img src="imgs/ImgsAccueil/Actualites/club de curistes.jpg" alt="Éducation Thérapeutique">
       <div class="actualite-content">
         <span>Publié le 17/10/2024</span>
         <h3>L’Éducation Thérapeutique du Patient pendant sa cure thermale</h3>
@@ -84,7 +84,7 @@ if (!isset($_SESSION['user_id'])) {
 
     <!-- Actualité 8-->
     <div class="actualite-card">
-      <img src="../img/ImgsActualites/image2.jpg" alt="Cure post-cancer">
+      <img src="imgs/ImgsAccueil/Actualites/club de curistes.jpg" alt="Cure post-cancer">
       <div class="actualite-content">
         <span>Publié le 15/10/2024</span>
         <h3>Prise en charge de la cure post-cancer</h3>
@@ -93,7 +93,7 @@ if (!isset($_SESSION['user_id'])) {
     </div>
     <!-- Actualité 9-->
     <div class="actualite-card">
-      <img src="../img/ImgsActualites/image3.jpg" alt="Éducation Thérapeutique">
+      <img src="imgs/ImgsAccueil/Actualites/club de curistes.jpg" alt="Éducation Thérapeutique">
       <div class="actualite-content">
         <span>Publié le 17/10/2024</span>
         <h3>L’Éducation Thérapeutique du Patient pendant sa cure thermale</h3>
@@ -102,7 +102,7 @@ if (!isset($_SESSION['user_id'])) {
     </div>
     <!-- Actualité 10-->
     <div class="actualite-card">
-      <img src="../img/ImgsActualites/image1.jpg" alt="Éducation Thérapeutique">
+      <img src="imgs/ImgsAccueil/Actualites/club de curistes.jpg" alt="Éducation Thérapeutique">
       <div class="actualite-content">
         <span>Publié le 17/10/2024</span>
         <h3>L’Éducation Thérapeutique du Patient pendant sa cure thermale</h3>
@@ -111,7 +111,7 @@ if (!isset($_SESSION['user_id'])) {
     </div>
     <!-- Actualité 11-->
     <div class="actualite-card">
-      <img src="../img/ImgsActualites/image2.jpg" alt="Cure post-cancer">
+      <img src="imgs/ImgsAccueil/Actualites/club de curistes.jpg" alt="Cure post-cancer">
       <div class="actualite-content">
         <span>Publié le 15/10/2024</span>
         <h3>Prise en charge de la cure post-cancer</h3>
@@ -120,7 +120,7 @@ if (!isset($_SESSION['user_id'])) {
     </div>
     <!-- Actualité 12-->
     <div class="actualite-card">
-      <img src="../img/ImgsActualites/image3.jpg" alt="Éducation Thérapeutique">
+      <img src="imgs/ImgsAccueil/Actualites/club de curistes.jpg" alt="Éducation Thérapeutique">
       <div class="actualite-content">
         <span>Publié le 17/10/2024</span>
         <h3>L’Éducation Thérapeutique du Patient pendant sa cure thermale</h3>
